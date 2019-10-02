@@ -71,6 +71,7 @@ bool q_insert_head(queue_t *q, char *s)
     strcpy(newh->value, s);
     newh->next = q->head;
     q->head = newh;
+    q->size++;
     return true;
 }
 
