@@ -192,6 +192,7 @@ void q_reverse(queue_t *q)
     if (q == NULL || q->head == NULL) {
         return;
     }
+    q->tail = q->head;
     list_ele_t *prev = NULL;
     list_ele_t *curr = q->head;
     list_ele_t *preceding = q->head->next;
